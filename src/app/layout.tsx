@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local'
+
+const lavishlyYours = localFont({
+  src: [
+    { path: '../../public/fonts/LavishlyYours-Regular.ttf', weight: '400', style: 'normal' },
+  ],
+  variable: '--font-lavi',   // optional: CSS variable name
+  display: 'swap',             // recommended
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={lavishlyYours.variable}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
