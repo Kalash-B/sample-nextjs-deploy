@@ -7,8 +7,8 @@ import SvgStyle from "@/app/components/SvgStyle";
 export default function Home() {
   return (
     <main>
-      <ShiningR />
-      {/* <SvgStyle /> */}
+      {/* <ShiningR /> */}
+      <SvgStyle />
       {/* <LogoShine /> */}
     </main>
   );
